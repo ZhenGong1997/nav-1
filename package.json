@@ -4,7 +4,7 @@
   },
   "name": "nav-1",
   "version": "1.0.0",
-  "main": "index.js",
+  
   "repository": "https://github.com/ZhenGong1997/nav-1.git",
   "author": "Zhen <zhengong.mcmaster@gmail.com>",
   "license": "MIT"
