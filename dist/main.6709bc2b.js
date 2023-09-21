@@ -143,6 +143,10 @@ var hashMap = xObject || [{
   logo: "M",
   logoType: 'image',
   url: "https://developer.mozilla.org"
+}, {
+  logo: "I",
+  logoType: 'image',
+  url: "https://iconfont.cn"
 }];
 var simplifyUrl = function simplifyUrl(url) {
   return url.replace('https://', '').replace('http://', '').replace('www.', '').replace(/\/.*/, ''); //正则表达式删除/开头的内容
@@ -200,4 +204,4 @@ $(document).on('keypress', function (e) {
   }
 });
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.93a268eb.js.map
+//# sourceMappingURL=main.6709bc2b.js.map

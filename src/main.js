@@ -15,6 +15,7 @@ const hashMap = xObject || [
     {logo:"G",  logoType:'image', url:"https://www.github.com"},
     {logo:"C", logoType:'image', url:"https://www.css-tricks.com"},
     {logo:"M", logoType:'image', url:"https://developer.mozilla.org"},
+    {logo:"I", logoType:'image', url:"https://iconfont.cn"},
 ]
 
 const simplifyUrl = (url) =>{
