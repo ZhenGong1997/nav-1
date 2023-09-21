@@ -11,7 +11,7 @@ const xObject = JSON.parse(x)
 //     {logo:"./images/mdn-logo.png", logoType:'image', url:"https://developer.mozilla.org"},
 // ]
 
-let hashMap = xObject || [
+const hashMap = xObject || [
     {logo:"G",  logoType:'image', url:"https://www.github.com"},
     {logo:"C", logoType:'image', url:"https://www.css-tricks.com"},
     {logo:"M", logoType:'image', url:"https://developer.mozilla.org"},
