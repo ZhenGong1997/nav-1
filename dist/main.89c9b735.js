@@ -193,15 +193,23 @@ window.onbeforeunload = function () {
   // localStrorage在本地设置一个值，并把string传给他
   localStorage.setItem('x', string);
 };
-$(document).on('keypress', function (e) {
-  // 同下const key = e.key
-  var key = e.key;
-  for (var i = 0; i < hashMap.length; i++) {
-    console.log(hashMap[i].logo.toLowerCase());
-    if (hashMap[i].logo.toLowerCase() === key) {
-      window.open(hashMap[i].url);
+var searchInput = document.querySelector('#searchInput');
+searchInput.addEventListener('keypress', function (e) {
+  console.log("搜索框keypress", e);
+});
+document.addEventListener('keypress', function (e) {
+  console.log("页面keypress", e);
+  if (!searchInput.contains(e.target)) {
+    var key = e.key;
+    for (var i = 0; i < hashMap.length; i++) {
+      console.log(hashMap[i].logo.toLowerCase());
+      if (hashMap[i].logo.toLowerCase() === key) {
+        window.open(hashMap[i].url);
+      }
     }
+  } else {
+    // e.preventDefault()
   }
 });
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.6709bc2b.js.map
+//# sourceMappingURL=main.89c9b735.js.map

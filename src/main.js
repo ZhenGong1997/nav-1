@@ -84,15 +84,24 @@ window.onbeforeunload = ()=>{
     localStorage.setItem('x', string)
 }
 
-$(document).on('keypress',(e)=>{
-    
-    // 同下const key = e.key
-    const {key} = e
-    for(let i = 0; i < hashMap.length; i++){
-        console.log(hashMap[i].logo.toLowerCase())
-        if(hashMap[i].logo.toLowerCase() === key){
-            window.open(hashMap[i].url)
-        }
+const searchInput = document.querySelector('#searchInput')
+searchInput.addEventListener('keypress', (e) => {
+    console.log("搜索框keypress",e)
+})
+
+document.addEventListener('keypress',(e)=>{
+    console.log("页面keypress",e)
+    if(!searchInput.contains(e.target)){
+        const {key} = e
+        for(let i = 0; i < hashMap.length; i++){
+            console.log(hashMap[i].logo.toLowerCase())
+            if(hashMap[i].logo.toLowerCase() === key){
+                window.open(hashMap[i].url)
+            }
+        }        
+    } else {
+        // e.preventDefault()
     }
 })
+
 
